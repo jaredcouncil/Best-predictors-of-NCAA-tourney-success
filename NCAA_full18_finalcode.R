@@ -248,7 +248,7 @@ tourney18_final
 
 #There are 68 teams in the NCAA Tournament. (Eight play in play-in round to determine the final 64 teams)
 #Test to make sure all 68 names match
-intersect(stats18_final$School, tourney_final$School)
+intersect(stats18_final$School, tourney18_final$School)
 
 #Combine stats final with tourney final
 NCAA18_full <- left_join(stats18_final, tourney18_final, by = "School")
