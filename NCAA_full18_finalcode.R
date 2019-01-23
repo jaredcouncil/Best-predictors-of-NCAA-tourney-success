@@ -168,7 +168,7 @@ School_both <- bind_rows(School_winners, School_losers) %>%
 School_both %>% View()
 
 #It's now possible to easily show win totals for each school
-#Create new table with that info (will you later to test win count of another table)
+#Create new table with that info (will use later to test win count of another table)
 School_wins <- School_both %>% 
   group_by(School) %>% 
   summarise(wins = sum(result)) %>%
@@ -178,7 +178,7 @@ School_wins %>% View()
 #Create a table with binary columns showing each team's result for each round
 School_rounds <- School_both %>% 
   select(-game_num) %>% 
-  spread(round, result, fill = 0) #if want to keep NAs, remove "fill = 0"
+  spread(round, result) #if you want to remove NAs, enter "fill = 0"
 School_rounds %>% View()
 
 #rename round columns
@@ -186,16 +186,10 @@ School_rounds <- School_rounds %>%
   rename(Fir_4 = 3, Rnd_64 = 4, Rnd_32 = 5, Swt_16 = 6, Eli_8 = 7, Fin_4 = 8, Champ = 9)
 School_rounds
 
-#tally the wins in a new column (struggled here, so following is makeshift method)
-School_tally <- School_rounds %>% 
-  select(-School, -seed) %>% #removed School, seed columns so I could tally up others
-  mutate(wins = apply(., 1, sum)) %>% #created a new column with the sums, called "wins"
-  select(wins) #only selected new column (to bind with rounds column later)
-School_tally
-
-#Combine the game results table with total wins table
-tourney18_final <- bind_cols(School_rounds, School_tally)
-tourney18_final
+#tally the wins in a new column
+tourney18_final <- School_rounds %>% 
+  mutate(wins = select(.,Fir_4:Champ) %>% rowSums(na.rm = TRUE))  #tip from Tom Hopper
+tourney18_final %>% View()
 
 #############################
 #Test for win count accuracy: created new wins table and compared with wins table created earlier
@@ -252,7 +246,9 @@ intersect(stats18_final$School, tourney18_final$School)
 
 #Combine stats final with tourney final
 NCAA18_full <- left_join(stats18_final, tourney18_final, by = "School")
-NCAA18_full
+NCAA18_full %>% View()
+
+#when I did bulk run, all my NAs were zero. When I did line by line, it's back to NAs
 
 #Check structure (84 variables; 17 overall; 29 offensive; 29 defensive; 9 tourney results)
 str(NCAA18_full)
