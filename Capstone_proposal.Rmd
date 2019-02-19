@@ -1,12 +1,12 @@
 ---
-title: "Best predictors of NCAA Tournament Success"
+title: "Best Predictors of NCAA Tournament Success"
 author: "Jared Council"
 date: "February 18, 2019"
-output:
-  html_document:
-    df_print: paged
-  keep_md: yes
+output: 
+  html_document: 
+    keep_md: yes
 ---
+
 
 **Problem**
 

@@ -1,11 +1,12 @@
 ---
-title: "Best predictors of NCAA Tournament Success"
+title: "Best Predictors of NCAA Tournament Success"
 author: "Jared Council"
 date: "February 18, 2019"
 output: 
   html_document: 
     keep_md: yes
 ---
+
 
 **Problem**
 
@@ -36,10 +37,8 @@ Generally speaking, my methodology will consist of the following:
 
 **Deliverables**
 
--   Would include code and a slide deck that walks the user through the analysis.
+-   Slide deck that walks the user through the analysis
 
--   Ranking of the most impactful stats by magnitude (the three stats that correlate most with wins and the three that are correlate most with losses)
+-   Pareto charts ranking of the most impactful stats by magnitude (stats that correlate most with wins and those that correlate most with losses)
 
--   Bar chart of how much each stat contributes to a win
-
--   Pareto chart
+-   Underlying code
