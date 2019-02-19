@@ -193,22 +193,27 @@ $(document).ready(function () {
 
 
 <p><strong>Problem</strong></p>
-<p>Looking to answer this question: Which regular-season team statistics correlate most with wins in the NCAA Tournament?</p>
+<p>Every year, 68 men’s college basketball teams are have a chance to become National Champion. But NCAA basketball coaches have few insights into the team-level stats that correlate most with Tournament wins. As a result, they’re game-planning for individual teams, as opposed to honing skills and attributes that could position them for deep runs in the Tournament. NCAA coaches could use insights into the team stats that matter the most in the tournament.</p>
 <p><strong>Client and value prop</strong></p>
-<p>The client is the coach of an NCAA men’s basketball team. They care about this problem because they want to make a run deep in the NCAA Tournament. Based on this analysis, they’ll be able to see which team stats are most indicative of post-season success and hone those skills.</p>
+<p>The client is the coach of an NCAA men’s basketball team. They care about this problem because they want to make a run deep in the NCAA Tournament. Based on this analysis, they’ll be able to see which team stats are most indicative of post-season success and hone those skills. They’ll also be able to see which stats correlate most with losses, in order to avoid them.</p>
 <p><strong>Data sets</strong></p>
 <p>I plan to use data that the NCAA has made widely available on Kaggle here <a href="https://www.kaggle.com/ncaa/ncaa-basketball" class="uri">https://www.kaggle.com/ncaa/ncaa-basketball</a>. It will cover every team in the nation and include statistics such as points per game, offensive efficiency, passes per game, steals, and turnovers. I’ll acquire this data by downloading files from Kaggle or wherever else the NCAA has made that info available. I may also use data from Basketball Reference <a href="https://www.sports-reference.com/cbb/" class="uri">https://www.sports-reference.com/cbb/</a></p>
 <p><strong>Approach</strong></p>
 <p>Generally speaking, my methodology will consist of the following:</p>
 <ul>
-<li><p>Compile a list of all the teams that made the NCAA Tournament over the past 10 years and show how many games they won during a tournament in each year (the most you can win is six).</p></li>
+<li><p>Compile a list of all the teams that made the NCAA Tournament over the past five years and show how many games they won during a tournament in each year (the most a team can win is six).</p></li>
 <li><p>For each team in each year, compile regular-season statistics for maybe 10-15 different areas (such as offensive efficiency, steals, rebounds). I’ll do two things with each stat—determine ranking (2nd) and absolute numbers (78 points per game).</p></li>
 <li><p>For each statistic that year, I plan to overlay rankings with wins (and absolute stats with wins) in scatter chart to determine which stats have the strongest correlation with wins. When done, I expect to be able to answer things like: Where did the Tourney winner rank in that stat? What about the teams that won five games? Four games? How many outliers where there (e.g. teams that ranked poorly but performed very well and vice versa)?</p></li>
 <li><p>Since that’ll just be for one year, I’ll overlay data for previous years for each stat. So one stat will have, potentially, 640 plots in the scatter chart (wins vs. ranking). The same will be true for absolute numbers, which I only plan to look at secondarily.</p></li>
 <li><p>I’ll repeat the process with every stat and determine (maybe with a quotient or a correlation score) which three stats are the most correlated with wins?</p></li>
 </ul>
 <p><strong>Deliverables</strong></p>
-<p>Would include code and a slide deck that walks the user through the analysis.</p>
+<ul>
+<li><p>Would include code and a slide deck that walks the user through the analysis.</p></li>
+<li><p>Ranking of the most impactful stats by magnitude (the three stats that correlate most with wins and the three that are correlate most with losses)</p></li>
+<li><p>Bar chart of how much each stat contributes to a win</p></li>
+<li><p>Pareto chart</p></li>
+</ul>
 
 
 

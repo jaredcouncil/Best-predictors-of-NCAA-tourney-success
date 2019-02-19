@@ -9,11 +9,12 @@ output:
 
 **Problem**
 
-Looking to answer this question: Which regular-season team statistics correlate most with wins in the NCAA Tournament?
+Every year, 68 men's college basketball teams are have a chance to become National Champion. But NCAA basketball coaches have few insights into the team-level stats that correlate most with Tournament wins. As a result, they're game-planning for individual teams, as opposed to honing skills and attributes that could position them for deep runs in the Tournament. NCAA coaches could use insights into the team stats that matter the most in the tournament.     
+
 
 **Client and value prop**
 
-The client is the coach of an NCAA men's basketball team. They care about this problem because they want to make a run deep in the NCAA Tournament. Based on this analysis, they'll be able to see which team stats are most indicative of post-season success and hone those skills.
+The client is the coach of an NCAA men's basketball team. They care about this problem because they want to make a run deep in the NCAA Tournament. Based on this analysis, they'll be able to see which team stats are most indicative of post-season success and hone those skills. They'll also be able to see which stats correlate most with losses, in order to avoid them.
 
 **Data sets**
 
@@ -23,7 +24,7 @@ I plan to use data that the NCAA has made widely available on Kaggle here <https
 
 Generally speaking, my methodology will consist of the following:
 
--   Compile a list of all the teams that made the NCAA Tournament over the past 10 years and show how many games they won during a tournament in each year (the most you can win is six).
+-   Compile a list of all the teams that made the NCAA Tournament over the past five years and show how many games they won during a tournament in each year (the most a team can win is six).
 
 -   For each team in each year, compile regular-season statistics for maybe 10-15 different areas (such as offensive efficiency, steals, rebounds). I'll do two things with each stat---determine ranking (2nd) and absolute numbers (78 points per game).
 
@@ -35,4 +36,10 @@ Generally speaking, my methodology will consist of the following:
 
 **Deliverables**
 
-Would include code and a slide deck that walks the user through the analysis.
+-   Would include code and a slide deck that walks the user through the analysis.
+
+-   Ranking of the most impactful stats by magnitude (the three stats that correlate most with wins and the three that are correlate most with losses)
+
+-   Bar chart of how much each stat contributes to a win
+
+-   Pareto chart
